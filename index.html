@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Lyhak - Galactic Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --neon-cyan: #00f2ff;
+            --accent-font: 'Cinzel', serif;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Keeps the stars inside */
+            background: #050505;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Animated Galaxy/Starfall Background */
+        .galaxy-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        /* Animated Star Particles */
+        .stars-container {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: transparent;
+        }
+
+        /* The Card Container */
+        .main-card {
+            width: 350px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 242, 255, 0.4);
+            border-radius: 25px;
+            padding: 40px 25px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 242, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-name {
+            letter-spacing: 8px;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        /* Big to Small Image Animation */
+        .img-container {
+            width: 100%;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 12px;
+            animation: breathe 5s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); filter: brightness(100%); }
+            50% { transform: scale(0.9); filter: brightness(120%); }
+        }
+
+        /* The New Font for CENCEE */
+        .cencee-font {
+            font-family: var(--accent-font);
+            font-size: 1.8rem;
+            color: #fff;
+            text-shadow: 0 0 8px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+            letter-spacing: 5px;
+            margin: 20px 0;
+        }
+
+        /* Social Link Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn i { font-size: 1.1rem; }
+
+        .btn:hover {
+            background: rgba(0, 242, 255, 0.2);
+            border-color: var(--neon-cyan);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 242, 255, 0.3);
+        }
+
+        /* Custom glow for bottom text */
+        .footer-text {
+            margin-top: 30px;
+            font-family: var(--accent-font);
+            font-size: 0.9rem;
+            opacity: 0.6;
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galaxy-bg"></div>
+    <div class="stars-container"></div>
+
+    <div class="main-card">
+        <div class="header-name">SAN LYHAK</div>
+
+        <div class="img-container">
+            <img src="https://i.postimg.cc/zDTPjmfp/IMG-20260125-194020-964.jpg" class="profile-img" alt="San Lyhak">
+        </div>
+
+        <div class="cencee-font">CENCEE</div>
+
+        <div class="grid">
+            <a href="https://t.me/TH3Cen_cee" class="btn"><i class="fab fa-telegram"></i> sanlyhak</a>
+            <a href="https://www.facebook.com/share/1861ZHhWUh/" class="btn"><i class="fab fa-facebook"></i> San Lyhak</a>
+            <a href="https://www.instagram.com/th3cencee?igsh=YzJnMWRoM2xuaHBr" class="btn"><i class="fab fa-instagram"></i> @sanlyhak11</a>
+            <a href="https://www.tiktok.com/@th3cen_cee?_r=1&_t=ZS-949evij6szM" class="btn"><i class="fab fa-tiktok"></i> @sanlyhak</a>
+        </div>
+
+        <div class="footer-text">CENCEE</div>
+    </div>
+
+</body>
+</html>
